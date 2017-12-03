@@ -5,6 +5,7 @@
   "author": "cxpqwvtj",
   "license": "MIT",
   "dependencies": {
-    "alexa-sdk": "^1.0.22"
+    "alexa-sdk": "^1.0.22",
+    "moment": "^2.19.3"
   }
 }
