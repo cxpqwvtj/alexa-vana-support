@@ -11,9 +11,14 @@ var handlers = {
   'LaunchRequest': function () {
     this.emit('AMAZON.HelpIntent');
   },
-  // スキルの使い方を尋ねるインテント
   'AMAZON.HelpIntent': function () {
     this.emit(':tell', 'おいすー');
+  },
+  'Datetime': function () {
+    this.emit(':tell', 'ヴァナ時刻くらい自分で調べろばかやろー');
+  },
+  'tora': function () {
+    this.emit(':tell', 'とら');
   },
   'Unhandled': function () {
     this.emit(':tell', 'よい旅を');
