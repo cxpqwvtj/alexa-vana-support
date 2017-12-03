@@ -1,0 +1,10 @@
+{
+  "name": "alexa-vana-support",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "cxpqwvtj",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-sdk": "^1.0.22"
+  }
+}
