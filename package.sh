@@ -15,3 +15,5 @@ fi
 cp -f index.js vana-support/
 cp -f package.json vana-support/
 cp -f yarn.lock vana-support/
+
+zip -r vana-support.zip vana-support
