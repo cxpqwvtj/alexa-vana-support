@@ -1,4 +1,5 @@
 var Alexa = require('alexa-sdk');
+var moment = require('moment');
 exports.handler = function(event, context, callback) {
   console.log(event);
   var alexa = Alexa.handler(event, context);
@@ -15,7 +16,8 @@ var handlers = {
     this.emit(':tell', 'おいすー');
   },
   'Datetime': function () {
-    this.emit(':tell', 'ヴァナ時刻くらい自分で調べろばかやろー');
+    const message = moment().utcOffset("+09:00").format('YYYY年MM月D日 H時m分s秒');
+    this.emit(':tell', `地球時間は${message}です`);
   },
   'tora': function () {
     this.emit(':tell', 'とら');
