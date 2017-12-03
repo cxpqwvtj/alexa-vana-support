@@ -7,6 +7,6 @@ exports.handler = function(event, context, callback) {
  
 var handlers = {
     'Unhandled': function () {
-        this.emit(':tell', 'Hello Workd');
+        this.emit(':tell', 'よい旅を');
     }
 };
