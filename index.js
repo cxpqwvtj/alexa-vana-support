@@ -7,6 +7,13 @@ exports.handler = function(event, context, callback) {
 };
  
 var handlers = {
+  'LaunchRequest': function () {
+    this.emit('AMAZON.HelpIntent');
+  },
+  // スキルの使い方を尋ねるインテント
+  'AMAZON.HelpIntent': function () {
+    this.emit(':tell', 'おいすー');
+  },
   'Unhandled': function () {
     this.emit(':tell', 'よい旅を');
   }
