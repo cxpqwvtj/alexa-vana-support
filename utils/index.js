@@ -1,10 +1,10 @@
 const moment = require('moment')
 
-const weekDays = ['火', '土', '水', '風', '氷', '雷', '光', '闇']
-const moonList = ['二十日月', '二十六夜', '新月', '三日月', '七日月', '上弦の月', '十日月', '十三夜', '満月', '十六夜', '居待月', '下弦の月']
-
 module.exports = {
   vanaTime: () => {
+    const weekDays = ['火', '土', '水', '風', '氷', '雷', '光', '闇']
+    const moonList = ['二十日月', '二十六夜', '新月', '三日月', '七日月', '上弦の月', '十日月', '十三夜', '満月', '十六夜', '居待月', '下弦の月']
+
     const vanaTotalPassSec = (moment().unix() + 92514960) * 25
     const vanaWeek = Math.floor( vanaTotalPassSec / (24 * 60 * 60) ) % 8
     const vanaMoon = Math.floor( (vanaTotalPassSec + 24 * 60 * 60 * 2) / (24 * 60 * 60 * 7) ) % 12
@@ -24,7 +24,7 @@ module.exports = {
       vanaWeek,
       vanaWeekJp: weekDays[vanaWeek],
       vanaMoon,
-      vanaMoonJp: moonList[vanaMoon]
+      vanaMoonJp: moonList[vanaMoon],
       vanaYear,
       vanaMonth,
       vanaDay,
