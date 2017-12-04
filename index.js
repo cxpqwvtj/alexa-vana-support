@@ -1,5 +1,6 @@
 const Alexa = require('alexa-sdk')
 const moment = require('moment')
+
 exports.handler = function(event, context, callback) {
   console.log(event)
   const alexa = Alexa.handler(event, context)
@@ -20,7 +21,7 @@ const handlers = {
     this.emit('AMAZON.HelpIntent')
   },
   'AMAZON.HelpIntent': function () {
-    this.emit(':tell', 'おいすー')
+    this.emit(':tell', 'ようこそ。ヴァナサポへ。ヴァナ時間を知りたい場合は、ヴァナサポで時間を教えて、と聞いてください。')
   },
   'Datetime': function () {
     const vanaTotalPassSec = (moment().unix() + 92514960) * 25
