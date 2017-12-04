@@ -1,7 +1,7 @@
-const Alexa = require('alexa-sdk')
-const moment = require('moment')
+import Alexa from 'alexa-sdk'
+import moment from 'moment'
 
-exports.handler = function(event, context, callback) {
+exports const handler = (event, context, callback) => {
   console.log(event)
   const alexa = Alexa.handler(event, context)
   alexa.appId = process.env.APP_ID
