@@ -1,5 +1,6 @@
 const Alexa = require('alexa-sdk')
 const moment = require('moment')
+const utils = require('./utils')
 
 exports.handler = function(event, context, callback) {
   console.log(event)
@@ -24,21 +25,7 @@ const handlers = {
     this.emit(':tell', 'ようこそ。ヴァナサポへ。ヴァナ時間を知りたい場合は、ヴァナサポで時間を教えて、と聞いてください。')
   },
   'Datetime': function () {
-    const vanaTotalPassSec = (moment().unix() + 92514960) * 25
-    const vanaWeek = Math.floor( vanaTotalPassSec / (24 * 60 * 60) ) % 8
-    const vanaMoon = Math.floor( (vanaTotalPassSec + 24 * 60 * 60 * 2) / (24 * 60 * 60 * 7) ) % 12
-    let vanaCalcSec = vanaTotalPassSec
-    const vanaYear = Math.floor( vanaCalcSec / (360 * 24 * 60 * 60) )
-    vanaCalcSec = vanaCalcSec % (360 * 24 * 60 * 60)
-    const vanaMonth = Math.floor( vanaCalcSec / (30 * 24 * 60 * 60) + 1 )
-    vanaCalcSec = vanaCalcSec % (30 * 24 * 60 * 60)
-    const vanaDay = Math.floor( vanaCalcSec /  (24 * 60 * 60) + 1 )
-    vanaCalcSec = vanaCalcSec % (24 * 60 * 60)
-    const vanaHour = Math.floor( vanaCalcSec / (60 * 60) )
-    vanaCalcSec = vanaCalcSec % (60 * 60)
-    const vanaMinute = Math.floor( vanaCalcSec / (60) )
-    vanaCalcSec = vanaCalcSec % (60)
-    const vanaSec = Math.floor(vanaCalcSec)
+    const {vanaYear, vanaMonth, vanaDay, vanaHour, vanaMinute, vanaSec, vanaWeek, vanaMoon} = utils.vanaTime()
 
     const vanaTime = `${vanaYear}年${vanaMonth}月${vanaDay}日 ${vanaHour}時${vanaMinute}分${vanaSec}秒`
     console.log(vanaTime)
