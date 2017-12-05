@@ -1,4 +1,5 @@
 const Datetime = require('./datetime')
+const Moon = require('./Moon')
 const LimitedTimeChallenges = require('./LimitedTimeChallenges')
 
 module.exports = {
@@ -15,5 +16,6 @@ module.exports = {
     this.emit(':tell', 'よくわかりませんでしたが、よい旅を')
   },
   Datetime,
-  LimitedTimeChallenges
+  LimitedTimeChallenges,
+  Moon
 }
