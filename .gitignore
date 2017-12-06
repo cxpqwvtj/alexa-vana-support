@@ -126,4 +126,5 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows
 
-vana-support.zip
+/build/*
+/vana-support.zip
