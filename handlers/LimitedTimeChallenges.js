@@ -11,13 +11,14 @@ const limitedTimeChallenges = [
 ]
 
 module.exports = function() {
-  const nowChallenge = challengeName(moment().utcOffset('+09:00'))
-  const nextChallenge = challengeName(moment().utcOffset('+09:00').add(4, 'hour'))
+  const nowChallenge = challengeName(moment().utcOffset('+09:00').startOf('day'), moment().utcOffset('+09:00'))
+  const nextChallenge = challengeName(moment().utcOffset('+09:00').add(4, 'hour').startOf('day'), moment().utcOffset('+09:00').add(4, 'hour'))
   this.emit(':tell', `現在の期間限定目標は、${nowChallenge.name} です。次は、${nextChallenge.startHour}時から${nextChallenge.name} です。`)
 }
 
-const challengeName = (time) => {
-  const hour = time.diff(moment().utcOffset('+09:00').startOf('day'), 'hour')
+const challengeName = (baseTime, targetTime) => {
+  console.log(baseTime, targetTime)
+  const hour = targetTime.diff(baseTime, 'hour')
   let timeRangeIndex
   let startHour
   if (0 <= hour && hour < 4) {
@@ -40,7 +41,7 @@ const challengeName = (time) => {
     startHour = 20
   }
   return {
-    name: limitedTimeChallenges[time.weekday()][timeRangeIndex],
+    name: limitedTimeChallenges[targetTime.weekday()][timeRangeIndex],
     startHour
   }
 }
