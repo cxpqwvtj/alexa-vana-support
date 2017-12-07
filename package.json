@@ -7,5 +7,18 @@
   "dependencies": {
     "alexa-sdk": "^1.0.22",
     "moment": "^2.19.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.12.1",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=development webpack --progress --colors",
+    "package": "NODE_ENV=production webpack --progress --colors",
+    "package_ci": "NODE_ENV=production webpack --colors",
+    "package_win": "set NODE_ENV=production&& webpack --progress --colors",
+    "package_win_ci": "set NODE_ENV=production&& webpack --colors",
+    "watch": "NODE_ENV=development webpack --progress --colors --watch"
   }
 }
