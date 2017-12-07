@@ -16,9 +16,14 @@ module.exports = {
   rules: {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
-    semi: [2, 'never'],
+    semi: ['error', 'never'],
     'no-constant-condition': [0],
     indent: ['error', 2],
-    'no-console': 0
+    'no-console': 'off',
+    'array-bracket-spacing': ['error'],
+    'brace-style': ['error'],
+    'comma-spacing': ['error', {"before": false, "after": true}],
+    'comma-style': ['error', "last"],
+    'no-unused-vars': ['error', {'args': 'none'}]
   }
 }
