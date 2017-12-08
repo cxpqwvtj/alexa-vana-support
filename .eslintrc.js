@@ -34,6 +34,8 @@ module.exports = {
     "jest/globals": true
   },
   "globals": {
-    "console": false
+    "console": false,
+    "module": false,
+    "process": false
   }
 }
