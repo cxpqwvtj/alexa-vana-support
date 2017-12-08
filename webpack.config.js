@@ -20,7 +20,7 @@ function isExternal(module) {
 }
 
 module.exports = {
-  context: __dirname,
+  context: __dirname + '/src',
   entry: {
     'index': ['./index.js']
   },
