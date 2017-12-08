@@ -3,7 +3,10 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: ['eslint:recommended'],
+  extends: [
+    'eslint:recommended',
+    "plugin:jest/recommended"
+  ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -12,6 +15,7 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
+    'jest'
   ],
   rules: {
     'linebreak-style': ['error', 'unix'],
@@ -25,5 +29,11 @@ module.exports = {
     'comma-spacing': ['error', {"before": false, "after": true}],
     'comma-style': ['error', "last"],
     'no-unused-vars': ['error', {'args': 'none'}]
+  },
+  "env": {
+    "jest/globals": true
+  },
+  "globals": {
+    "console": false
   }
 }

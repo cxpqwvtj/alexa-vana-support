@@ -12,6 +12,8 @@
     "babel-eslint": "^8.0.3",
     "eslint": "^4.12.1",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-jest": "^21.4.2",
+    "jest-cli": "^21.2.1",
     "webpack": "^3.10.0"
   },
   "scripts": {
@@ -20,6 +22,10 @@
     "package_ci": "NODE_ENV=production webpack --colors",
     "package_win": "set NODE_ENV=production&& webpack --progress --colors",
     "package_win_ci": "set NODE_ENV=production&& webpack --colors",
-    "watch": "NODE_ENV=development webpack --progress --colors --watch"
+    "watch": "NODE_ENV=development webpack --progress --colors --watch",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
