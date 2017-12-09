@@ -17,7 +17,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  devtool: DEBUG ? 'inline-source-map' : false,
+  // devtool: DEBUG ? 'inline-source-map' : false,
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': `"${process.env.NODE_ENV || (DEBUG ? 'development' : 'production')}"` 
