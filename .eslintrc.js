@@ -36,6 +36,7 @@ module.exports = {
   "globals": {
     "console": false,
     "module": false,
+    "exports": false,
     "process": false
   }
 }
