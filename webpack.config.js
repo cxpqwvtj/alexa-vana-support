@@ -1,18 +1,16 @@
 var webpack = require('webpack')
-const nodeExternals = require('webpack-node-externals')
 
 const DEBUG = true // !(process.env.NODE_ENV === 'production')
-const VERBOSE = process.argv.includes('--verbose')
+// const VERBOSE = process.argv.includes('--verbose')
 
 module.exports = {
-  name: 'server',
   target: 'node',
-  // externals: [nodeExternals()],
   context: __dirname + '/src',
   entry: {
     'index': ['./index.js']
   },
   output: {
+    libraryTarget: 'commonjs',
     path: __dirname + '/build',
     filename: '[name].js',
   },
