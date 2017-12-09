@@ -29,6 +29,15 @@ test('tora', () => {
   handlers.tora()
 })
 
+test('moon通常', () => {
+  const unixMilliseconds = moment('2017/12/09 18:02:00', 'YYYY/MM/DD HH:mm:ss').utcOffset('+09:00').valueOf()
+  Date.now = jest.fn(() => new Date(unixMilliseconds)) // 現在時刻のmock
+  handlers.emit = (command, message) => {
+    expect(message).toMatch(/現在の月齢は十六夜 です。/)
+  }
+  handlers.Moon()
+})
+
 test('moon新月', () => {
   const unixMilliseconds = moment('2002/01/01 00:00:00', 'YYYY/MM/DD HH:mm:ss').utcOffset('+09:00').valueOf()
   Date.now = jest.fn(() => new Date(unixMilliseconds)) // 現在時刻のmock
