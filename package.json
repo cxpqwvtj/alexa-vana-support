@@ -6,7 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "alexa-sdk": "^1.0.22",
-    "moment": "^2.19.3"
+    "moment": "^2.19.3",
+    "source-map-support": "^0.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
@@ -14,7 +15,8 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-jest": "^21.4.2",
     "jest-cli": "^21.2.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
   },
   "scripts": {
     "build": "NODE_ENV=development webpack --progress --colors",

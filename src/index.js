@@ -1,3 +1,4 @@
+require('source-map-support').install()
 const Alexa = require('alexa-sdk')
 const handlers = require('./handlers')
 
