@@ -173,7 +173,7 @@ module.exports = function() {
       }
       this.emit(':tell', `${boost[area].readingName} の開拓応援、方角は、${boost[area].expects[index].orientation}、感情表現は、${boost[area].expects[index].emotion} です`)
     } else {
-      this.emit(':delegate')
+      this.emit(':elicitSlot', 'area', 'エリアをもう一度教えてください', 'エリアを教えてください', this.event.request.intent)
     }
   }
 }
