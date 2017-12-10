@@ -8,13 +8,13 @@ module.exports = {
     this.emit('AMAZON.HelpIntent')
   },
   'AMAZON.HelpIntent': function () {
-    this.emit(':tell', 'ようこそ。ヴァナサポへ。ヴァナ時間を知りたい場合は、ヴァナサポで時間を教えて、と聞いてください。')
+    this.emit(':ask', 'ようこそ。ヴァナサポへ')
   },
   'tora': function () {
-    this.emit(':tell', 'とら')
+    this.emit(':ask', 'とら')
   },
   'Unhandled': function () {
-    this.emit(':tell', 'よくわかりませんでしたが、よい旅を')
+    this.emit(':tell', 'イント不足でわかりません。勉強しておきます。')
   },
   Datetime,
   Moon,

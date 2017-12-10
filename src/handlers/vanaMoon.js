@@ -14,5 +14,5 @@ module.exports = function() {
       return ''
     }
   })()
-  this.emit(':tell', `現在の月齢は${vanaMoonJp} です。${effect}`)
+  this.emit(':ask', `現在の月齢は${vanaMoonJp} です。${effect}`)
 }

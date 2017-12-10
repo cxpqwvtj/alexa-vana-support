@@ -13,7 +13,7 @@ const limitedTimeChallenges = [
 module.exports = function() {
   const nowChallenge = challengeName(moment().utcOffset('+09:00').startOf('day'), moment().utcOffset('+09:00'))
   const nextChallenge = challengeName(moment().utcOffset('+09:00').add(4, 'hour').startOf('day'), moment().utcOffset('+09:00').add(4, 'hour'))
-  this.emit(':tell', `現在の期間限定目標は、${nowChallenge.name} です。次は、${nextChallenge.startHour}時から${nextChallenge.name} です。`)
+  this.emit(':ask', `現在の期間限定目標は、${nowChallenge.name} です。次は、${nextChallenge.startHour}時から${nextChallenge.name} です。`)
 }
 
 const challengeName = (baseTime, targetTime) => {
