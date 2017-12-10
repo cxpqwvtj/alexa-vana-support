@@ -1,4 +1,5 @@
 const message = require('../commonMessage')
+const netaKnight = require('./neta').netaKnight
 const Datetime = require('./datetime')
 const Moon = require('./vanaMoon')
 const LimitedTimeChallenges = require('./limitedTimeChallenge')
@@ -17,6 +18,7 @@ module.exports = {
   'Unhandled': function () {
     this.emit(':tell', 'いんと よん？ で理解できません。勉強してきます。')
   },
+  netaKnight,
   Datetime,
   Moon,
   LimitedTimeChallenges,
