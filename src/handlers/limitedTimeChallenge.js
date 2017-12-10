@@ -1,4 +1,5 @@
 const moment = require('moment')
+const message = require('../commonMessage')
 
 const limitedTimeChallenges = [
   ['魔法ダメージで倒す', 'プラントイド類を倒す', 'アモルフ類を倒す', 'ヴァーミン類を倒す', 'アルカナ類を倒す', '経験値をえる'], // 日曜
@@ -13,7 +14,7 @@ const limitedTimeChallenges = [
 module.exports = function() {
   const nowChallenge = challengeName(moment().utcOffset('+09:00').startOf('day'), moment().utcOffset('+09:00'))
   const nextChallenge = challengeName(moment().utcOffset('+09:00').add(4, 'hour').startOf('day'), moment().utcOffset('+09:00').add(4, 'hour'))
-  this.emit(':ask', `現在の期間限定目標は、${nowChallenge.name} です。次は、${nextChallenge.startHour}時から${nextChallenge.name} です。`)
+  this.emit(':ask', `現在の期間限定目標は、${nowChallenge.name} です。次は、${nextChallenge.startHour}時から${nextChallenge.name} です。`, message.LINE_CLOSE)
 }
 
 const challengeName = (baseTime, targetTime) => {

@@ -1,3 +1,4 @@
+const message = require('../commonMessage')
 const utils = require('../utils')
 
 module.exports = function() {
@@ -5,5 +6,5 @@ module.exports = function() {
 
   const vanaTime = `${vanaYear}年${vanaMonth}月${vanaDay}日 ${vanaHour}時${vanaMinute}分${vanaSec}秒`
   console.log(vanaTime, vanaWeekJp, vanaMoonJp)
-  this.emit(':ask', `ヴァナディール時間は${vanaHour}時${vanaMinute}分。 ${vanaWeekJp} 曜日 です。`)
+  this.emit(':ask', `ヴァナディール時間は${vanaHour}時${vanaMinute}分。 ${vanaWeekJp} 曜日 です。`, message.LINE_CLOSE)
 }

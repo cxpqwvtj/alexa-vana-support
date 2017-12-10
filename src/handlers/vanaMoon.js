@@ -1,3 +1,4 @@
+const message = require('../commonMessage')
 const utils = require('../utils')
 
 module.exports = function() {
@@ -14,5 +15,5 @@ module.exports = function() {
       return ''
     }
   })()
-  this.emit(':ask', `現在の月齢は${vanaMoonJp} です。${effect}`)
+  this.emit(':ask', `現在の月齢は${vanaMoonJp} です。${effect}`, message.LINE_CLOSE)
 }

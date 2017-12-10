@@ -1,3 +1,4 @@
+const message = require('../commonMessage')
 const Datetime = require('./datetime')
 const Moon = require('./vanaMoon')
 const LimitedTimeChallenges = require('./limitedTimeChallenge')
@@ -8,13 +9,13 @@ module.exports = {
     this.emit('AMAZON.HelpIntent')
   },
   'AMAZON.HelpIntent': function () {
-    this.emit(':ask', 'ようこそ。ヴァナサポへ')
+    this.emit(':ask', 'ようこそ。ヴァナサポへ', message.LINE_CLOSE)
   },
   'tora': function () {
-    this.emit(':ask', 'とら')
+    this.emit(':ask', 'とら', message.LINE_CLOSE)
   },
   'Unhandled': function () {
-    this.emit(':tell', 'イント不足でわかりません。勉強しておきます。')
+    this.emit(':tell', 'INTよん？で理解できません。勉強してきます。')
   },
   Datetime,
   Moon,
