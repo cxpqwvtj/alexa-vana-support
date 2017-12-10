@@ -1,4 +1,5 @@
 const moment = require('moment')
+const Immutable = require('immutable')
 
 module.exports = {
   vanaTime: () => {
@@ -32,5 +33,10 @@ module.exports = {
       vanaMinute,
       vanaSec
     }
+  },
+  jsToImmutable: (obj) => {
+    return Immutable.fromJS(obj, function(key, value, path) {
+      return Immutable.Iterable.isIndexed(value) ? value.toList() : value.toOrderedMap()
+    })
   }
 }

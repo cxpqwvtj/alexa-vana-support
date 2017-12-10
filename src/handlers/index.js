@@ -1,6 +1,7 @@
 const Datetime = require('./datetime')
 const Moon = require('./vanaMoon')
 const LimitedTimeChallenges = require('./limitedTimeChallenge')
+const mummersCoalitionBoost = require('./mummersCoalitionBoost')
 
 module.exports = {
   'LaunchRequest': function () {
@@ -17,5 +18,6 @@ module.exports = {
   },
   Datetime,
   Moon,
-  LimitedTimeChallenges
+  LimitedTimeChallenges,
+  mummersCoalitionBoost
 }
