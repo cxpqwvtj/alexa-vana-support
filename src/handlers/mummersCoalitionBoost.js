@@ -7,23 +7,141 @@ module.exports = function() {
       readingName: 'モリマー台地',
       expects: [{ // 00:00 ~ 2:59
         orientation: 'SE から S',
-        emotion: '励'
+        emotion: '励ます'
       }, { // 3:00 ~ 5:59
         orientation: 'S から SW',
-        emotion: '慌'
+        emotion: '慌てる'
+      }, { // 6:00 ~ 8:59
+        orientation: 'SW から W',
+        emotion: '照れる'
+      }, { // 9:00 ~ 11:59
+        orientation: 'W から NW',
+        emotion: '気合を入れる'
+      }, { // 12:00 ~ 14:59
+        orientation: 'NW から N',
+        emotion: '喜ぶ'
+      }, { // 15:00 ~ 17:59
+        orientation: 'N から NE',
+        emotion: '泣く'
+      }, { // 18:00 ~ 20:59
+        orientation: 'NE から E',
+        emotion: '驚く'
+      }, { // 21:00 ~ 23:59
+        orientation: 'E から SE',
+        emotion: '悔しがる'
       }]
     },
     'Hennetiel': {
-      readingName: 'エヌティーエルすいりん'
+      readingName: 'エヌティーエルすいりん',
+      expects: [{ // 00:00 ~ 2:59
+        orientation: 'E から SE',
+        emotion: '喜ぶ'
+      }, { // 3:00 ~ 5:59
+        orientation: 'SE から S',
+        emotion: '泣く'
+      }, { // 6:00 ~ 8:59
+        orientation: 'S から SW',
+        emotion: '驚く'
+      }, { // 9:00 ~ 11:59
+        orientation: 'SW から W',
+        emotion: '悔しがる'
+      }, { // 12:00 ~ 14:59
+        orientation: 'W から NW',
+        emotion: '励ます'
+      }, { // 15:00 ~ 17:59
+        orientation: 'NW から N',
+        emotion: '慌てる'
+      }, { // 18:00 ~ 20:59
+        orientation: 'N から NE',
+        emotion: '照れる'
+      }, { // 21:00 ~ 23:59
+        orientation: 'NE から E',
+        emotion: '気合を入れる'
+      }]
     },
     'Yorcia': {
-      readingName: 'ヨルシア森林'
+      readingName: 'ヨルシア森林',
+      expects: [{ // 00:00 ~ 2:59
+        orientation: 'S から SW',
+        emotion: '照れる'
+      }, { // 3:00 ~ 5:59
+        orientation: 'SW から W',
+        emotion: '気合を入れる'
+      }, { // 6:00 ~ 8:59
+        orientation: 'W から NW',
+        emotion: '喜ぶ'
+      }, { // 9:00 ~ 11:59
+        orientation: 'NW から N',
+        emotion: '泣く'
+      }, { // 12:00 ~ 14:59
+        orientation: 'N から NE',
+        emotion: '驚く'
+      }, { // 15:00 ~ 17:59
+        orientation: 'NE から E',
+        emotion: '悔しがる'
+      }, { // 18:00 ~ 20:59
+        orientation: 'E から SE',
+        emotion: '励ます'
+      }, { // 21:00 ~ 23:59
+        orientation: 'SE から S',
+        emotion: '慌てる'
+      }]
     },
     'Marjami': {
-      readingName: 'マリアミ渓谷'
+      readingName: 'マリアミ渓谷',
+      expects: [{ // 00:00 ~ 2:59
+        orientation: 'SW から W',
+        emotion: '悔しがる'
+      }, { // 3:00 ~ 5:59
+        orientation: 'W から NW',
+        emotion: '励ます'
+      }, { // 6:00 ~ 8:59
+        orientation: 'NW から N',
+        emotion: '慌てる'
+      }, { // 9:00 ~ 11:59
+        orientation: 'N から NE',
+        emotion: '照れる'
+      }, { // 12:00 ~ 14:59
+        orientation: 'NE から E',
+        emotion: '気合を入れる'
+      }, { // 15:00 ~ 17:59
+        orientation: 'E から SE',
+        emotion: '喜ぶ'
+      }, { // 18:00 ~ 20:59
+        orientation: 'SE から S',
+        emotion: '泣く'
+      }, { // 21:00 ~ 23:59
+        orientation: 'S から SW',
+        emotion: '驚く'
+      }]
     },
     'Kamihr': {
-      readingName: 'カミール山麓'
+      readingName: 'カミール山麓',
+      expects: [{ // 00:00 ~ 2:59
+        orientation: 'W から NW',
+        emotion: '励ます'
+      }, { // 3:00 ~ 5:59
+        orientation: 'NW から N',
+        emotion: '慌てる'
+      }, { // 6:00 ~ 8:59
+        orientation: 'N から NE',
+        emotion: '照れる'
+      }, { // 9:00 ~ 11:59
+        orientation: 'NE から E',
+        emotion: '気合を入れる'
+      }, { // 12:00 ~ 14:59
+        orientation: 'E から SE',
+        emotion: '喜ぶ'
+      }, { // 15:00 ~ 17:59
+        orientation: 'SE から S',
+        emotion: '泣く'
+      }, { // 18:00 ~ 20:59
+        orientation: 'S から SW',
+        emotion: '驚く'
+      }, { // 21:00 ~ 23:59
+        orientation: 'SW から W',
+        emotion: '悔しがる'
+      }]
     }
   }
   console.log(JSON.stringify(this.event.request))
