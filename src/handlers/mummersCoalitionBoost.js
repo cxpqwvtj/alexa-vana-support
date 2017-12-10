@@ -53,7 +53,7 @@ module.exports = function() {
       } else if (21 <= time.vanaHour && time.vanaHour < 24) {
         index = 7
       }
-      this.emit(':tell', `${boost[area].readingName} の開拓応援、方角は、${boost[area][index].orientation}、感情表現は、${boost[area][index].emotion} です`)
+      this.emit(':tell', `${boost[area].readingName} の開拓応援、方角は、${boost[area].expects[index].orientation}、感情表現は、${boost[area].expects[index].emotion} です`)
     } else {
       this.emit(':delegate')
     }
