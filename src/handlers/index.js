@@ -17,7 +17,7 @@ module.exports = {
     this.emit(':ask', 'とら', message.LINE_CLOSE)
   },
   'Unhandled': function () {
-    this.emit(':tell', 'いんと よん？ で理解できません。勉強してきます。')
+    this.emit(':tell', 'よくわかりませんでした。勉強してきます。')
   },
   netaKnight,
   netaGadalar,
