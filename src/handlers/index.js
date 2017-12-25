@@ -14,6 +14,12 @@ module.exports = {
   'AMAZON.HelpIntent': function () {
     this.emit(':ask', '時間を知りたい場合は、時間を教えて。と聞いてください。', message.LINE_CLOSE)
   },
+  'AMAZON.CancelIntent': function () {
+    this.emit(':tell', 'キャンセルしました。よい旅を')
+  },
+  'AMAZON.StopIntent': function () {
+    this.emit(':tell', 'ストップしました。よい旅を')
+  },
   'tora': function () {
     this.emit(':ask', 'とら', message.LINE_CLOSE)
   },
