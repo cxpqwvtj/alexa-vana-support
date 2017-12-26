@@ -12,7 +12,7 @@ module.exports = {
     this.emit(':ask', 'ようこそ。ヴァナサポへ', message.LINE_CLOSE)
   },
   'AMAZON.HelpIntent': function () {
-    this.emit(':ask', '時間を知りたい場合は、時間を教えて。と聞いてください。', message.LINE_CLOSE)
+    this.emit(':ask', '時間を知りたい場合は、時間を教えて。と話しかけてください。', message.LINE_CLOSE)
   },
   'AMAZON.CancelIntent': function () {
     this.emit(':tell', 'キャンセルしました。よい旅を')
@@ -21,7 +21,10 @@ module.exports = {
     this.emit(':tell', 'ストップしました。よい旅を')
   },
   'tora': function () {
-    this.emit(':ask', 'とら', message.LINE_CLOSE)
+    this.emit(':tell', 'とら', message.LINE_CLOSE)
+  },
+  'SessionEndedRequest': function() {
+    console.log('session ended!')
   },
   'Unhandled': function () {
     this.emit(':tell', 'よくわかりませんでした。勉強しておきます。')

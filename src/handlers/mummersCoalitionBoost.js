@@ -1,5 +1,4 @@
 const utils = require('../utils')
-const message = require('../commonMessage')
 
 module.exports = function() {
   const boost = {
@@ -171,7 +170,7 @@ module.exports = function() {
       } else if (21 <= time.vanaHour && time.vanaHour < 24) {
         index = 7
       }
-      this.emit(':ask', `${boost[area].readingName} の開拓応援、方角は、${boost[area].expects[index].orientation}、感情表現は、${boost[area].expects[index].emotion} です`, message.LINE_CLOSE)
+      this.emit(':tell', `${boost[area].readingName} の開拓応援、方角は、${boost[area].expects[index].orientation}、感情表現は、${boost[area].expects[index].emotion} です`)
     } else {
       this.emit(':elicitSlot', 'area', '開拓応援のエリアをもう一度教えてください', '開拓応援のエリアを教えてください', this.event.request.intent)
     }

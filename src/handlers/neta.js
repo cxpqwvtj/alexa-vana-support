@@ -1,6 +1,6 @@
 module.exports = {
   netaKnight: function() {
-    this.emit(':ask', 'うは。おけー')
+    this.emit(':tell', 'うは。おけー')
   },
   netaGadalar: function() {
     const message = [
@@ -16,6 +16,6 @@ module.exports = {
       '俺サマの火力は凄いぜ'
     ]
     const index = Math.floor((Math.random() * 10) % 10)
-    this.emit(':ask', message[index])
+    this.emit(':tell', message[index])
   }
 }

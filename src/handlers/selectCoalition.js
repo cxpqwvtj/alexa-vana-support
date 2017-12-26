@@ -11,7 +11,7 @@ module.exports = function() {
     const statusCode = event.getIn(['request', 'intent', 'slots', 'coalition', 'resolutions', 'resolutionsPerAuthority', 0, 'status', 'code'])
     if (statusCode === 'ER_SUCCESS_MATCH') {
       const coalition = event.getIn(['request', 'intent', 'slots', 'coalition', 'resolutions', 'resolutionsPerAuthority', 0, 'values', 0, 'value', 'name'])
-      this.emit(':ask', `${COALITION_NAME[coalition]}ワークスですね。今はわからないので勉強しておきます。`)
+      this.emit(':ask', `${COALITION_NAME[coalition]}ワークスですね。今はわからないので勉強しておきます。他のワークスを調べますか？`)
     } else {
       this.emit(':elicitSlot', 'coalition', 'ワークス名をもう一度教えてください', 'ワークス名を教えてください', this.event.request.intent)
     }
