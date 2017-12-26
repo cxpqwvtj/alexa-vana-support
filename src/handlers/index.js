@@ -21,7 +21,7 @@ module.exports = {
     this.emit(':tell', 'ストップしました。よい旅を')
   },
   'tora': function () {
-    this.emit(':tell', 'とら', message.LINE_CLOSE)
+    this.emit(':tell', 'とら')
   },
   'SessionEndedRequest': function() {
     console.log('session ended!')
