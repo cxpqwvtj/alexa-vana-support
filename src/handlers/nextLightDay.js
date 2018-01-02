@@ -10,5 +10,5 @@ module.exports = function() {
     ? nextLightDay.format('HH時mm分')
     : nextLightDay.format('DD日HH時mm分')
   
-  this.emit(':tell', `次の 光 曜日は、${message} です`)
+  this.emit(':tell', `次の 光 曜日は、地球時間の${message} です`)
 }
