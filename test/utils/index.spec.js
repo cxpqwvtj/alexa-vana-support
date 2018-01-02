@@ -64,5 +64,5 @@ test('2018/01/02 09:15:00のヴァナ時間', () => {
   expect(time.vanaWeekJp).toBe('光')
   expect(time.vanaMoonJp).toBe('居待月')
   console.log(time.nextLightDay)
-  // expect(time.nextLightDay.format('YYYY/MM/DD HH:mm')).toBe('2005/12/26 06:43')
+  expect(time.nextLightDay.format('YYYY/MM/DD HH:mm')).toBe('2018/01/02 16:19')
 })
