@@ -49,3 +49,20 @@ test('2005/12/26 00:00:00のヴァナ時間', () => {
   expect(time.vanaMoonJp).toBe('新月')
   expect(time.nextLightDay.format('YYYY/MM/DD HH:mm')).toBe('2005/12/26 06:43')
 })
+
+test('2018/01/02 09:15:00のヴァナ時間', () => {
+  const unixMilliseconds = moment('2018/01/02 09:15:00', 'YYYY/MM/DD HH:mm:ss').utcOffset('+09:00').valueOf()
+  Date.now = jest.fn(() => new Date(unixMilliseconds)) // 現在時刻のmock
+
+  const time = utils.vanaTime()
+  expect(time.vanaYear).toBe(1291)
+  expect(time.vanaMonth).toBe(12)
+  expect(time.vanaDay).toBe(5)
+  expect(time.vanaHour).toBe(15)
+  expect(time.vanaMinute).toBe(15)
+  expect(time.vanaSec).toBe(0)
+  expect(time.vanaWeekJp).toBe('光')
+  expect(time.vanaMoonJp).toBe('居待月')
+  console.log(time.nextLightDay)
+  // expect(time.nextLightDay.format('YYYY/MM/DD HH:mm')).toBe('2005/12/26 06:43')
+})

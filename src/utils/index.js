@@ -15,12 +15,12 @@ module.exports = {
     const msGameDay = (24 * 60 * 60 * 1000 / 25) // milliseconds in a game day
     const msRealDay = (24 * 60 * 60 * 1000) // milliseconds in a real day
 
-    const now = moment().toDate()
-    const vanaDate = ((898 * 360 + 30) * msRealDay) + (now.getTime() - basisDate.getTime()) * 25
+    const now = moment()
+    const vanaDate = ((898 * 360 + 30) * msRealDay) + (now.valueOf() - basisDate.getTime()) * 25
 
     // 次の光曜日計算
     const basisLightDay = basisWeekDay.getTime() - (msGameDay * 2)
-    const weekCount = Math.floor((now.getTime() - basisLightDay) / (msGameDay * weekDays.length)) + 1
+    const weekCount = Math.floor((now.valueOf() - basisLightDay) / (msGameDay * weekDays.length)) + 1
     const nextLightDay = basisLightDay + ((msGameDay * weekDays.length) * weekCount)
 
     const vYear = Math.floor(vanaDate / (360 * msRealDay))
@@ -46,7 +46,7 @@ module.exports = {
       vanaHour: vHour,
       vanaMinute: vMin,
       vanaSec: vSec,
-      nextLightDay: moment(nextLightDay).utcOffset('+09:00')
+      nextLightDay: moment(nextLightDay)
     }
   },
   jsToImmutable: (obj) => {
