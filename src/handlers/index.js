@@ -2,6 +2,7 @@ const message = require('../commonMessage')
 const netaKnight = require('./neta').netaKnight
 const netaGadalar = require('./neta').netaGadalar
 const Datetime = require('./datetime')
+const nextLightDay = require('./nextLightDay')
 const Moon = require('./vanaMoon')
 const LimitedTimeChallenges = require('./limitedTimeChallenge')
 const mummersCoalitionBoost = require('./mummersCoalitionBoost')
@@ -32,6 +33,7 @@ module.exports = {
   netaKnight,
   netaGadalar,
   Datetime,
+  nextLightDay,
   Moon,
   LimitedTimeChallenges,
   mummersCoalitionBoost,
